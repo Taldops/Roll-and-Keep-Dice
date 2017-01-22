@@ -1,2 +1,14 @@
-\Assets\Unity-Logs-Viewer
-\Assets\Dice
+unity-project/Assets/Unity-Logs-Viewer
+unity-project/Assets/Dice
+unity-project/Build
+unity-project/Temp
+unity-project/Library
+unity-project/Obj
+unity-project/Assets/StreamingAssets
+**/*.meta
+**/*.csproj
+**/*.unityproj
+**/*.sln
+**/*.user
+**/*.userprefs
+**/*.DS_store
