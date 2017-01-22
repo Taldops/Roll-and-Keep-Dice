@@ -1,0 +1,32 @@
+TODO
+- history feature
+- play around with physics (gravity, materials, force, drag) and dice spawn
+- animate roll button when critical, result display when done
+- (Particle) animation for dice disappearing (and appearing?)
+- Rolling Sphere
+	- Inverse Sphere Collider
+	- raycast pointer onto a plane
+	- invisible rigidbody dice spawner
+	- update dice for next roll (normal and crits) in real time
+	- lowpass filter while in bubble
+- lefthanded UI
+- Improve Portrait UI
+- ctrl f "To Do"
+- Refactoring
+- Adjust volume of individual sound effects
+	- how to calculate impact loudness?
+- special sound effect for abysmal rolls?
+- comment and cocument everything
+- remove Silence in all sound effects
+- clean up
+- optimize quality for mobile
+	- make quality dependent Lights and Types, Model Detail
+	- Have quality selector with preview camera (use render texture)
+- Extend Dice Manager to different types (d6 etc)
+- live with dithering or find an alternative to transparency
+	- alternatively: no shadows
+	- make smooth transitions with shader and material.lerp
+- Save and load presets?
+- iformation window
+- settings window: Quality, fps display, mute button
+- UI Placement/size calculations on ScreenChange event?
