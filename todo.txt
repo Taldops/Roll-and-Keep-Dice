@@ -1,4 +1,5 @@
 TODO
+- Make value 0 -> * on dice occur later
 - history feature
 - play around with physics (gravity, materials, force, drag) and dice spawn
 - animate roll button when critical, result display when done

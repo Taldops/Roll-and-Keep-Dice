@@ -180,10 +180,6 @@ public class ControlScript : MonoBehaviour {
 			{
 				Active_dice[i].GetComponent<Darken>().set_brightness(0.5f);	
 			}
-
-			//Keep dice from jittering
-			Active_dice[i].GetComponent<Rigidbody>().drag = 8;
-			Active_dice[i].GetComponent<Rigidbody>().angularDrag = 0.2f;
 		}
 		Tens = crits;
 		return result;
