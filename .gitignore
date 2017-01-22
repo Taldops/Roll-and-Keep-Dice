@@ -5,6 +5,7 @@ unity-project/Temp
 unity-project/Library
 unity-project/Obj
 unity-project/Assets/StreamingAssets
+unused_assets
 **/*.meta
 **/*.csproj
 **/*.unityproj
