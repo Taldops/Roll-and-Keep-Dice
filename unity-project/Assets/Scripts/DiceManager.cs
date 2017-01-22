@@ -54,6 +54,7 @@ public class DiceManager : MonoBehaviour {
 	{
 		foreach(GameObject die in all_dice)
 		{
+			//die.GetComponent<VanishParticles>().play();
 			GameObject.Destroy(die);
 		}
 		all_dice.Clear();
