@@ -12,17 +12,15 @@ public class SuccessEffects : MonoBehaviour {
 	private bool done = false;
 	private int start_index = 0;
 
-	// Has to be Awaken, not Start!
-	void Awaken () 
-	{
-		success_list = new bool[1];
-	}
-
 	void Start()
 	{
 		audio = GetComponents<AudioSource>();
 		start_index = audio.Length;
 		update_audio();
+		if(success_list == null)
+		{
+			success_list = new bool[1];
+		}
 	}
 
 	// Update is called once per frame

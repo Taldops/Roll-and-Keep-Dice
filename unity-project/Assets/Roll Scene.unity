@@ -725,7 +725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ec2e148ed84154f85dfb4cfb8d9e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.01
+  scroll_vector: {x: 0, y: 0}
 --- !u!224 &839127739 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224819116289959650, guid: 6b94a7251dac0094e9ff26d3612ddf18,
@@ -4020,27 +4020,27 @@ Prefab:
     - target: {fileID: 224710456841989832, guid: 0d4ccbeddeac24e4d87a448f5f3da040,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224710456841989832, guid: 0d4ccbeddeac24e4d87a448f5f3da040,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.05882353
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224075453019548676, guid: 0d4ccbeddeac24e4d87a448f5f3da040,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.05882353
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224075453019548676, guid: 0d4ccbeddeac24e4d87a448f5f3da040,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224075453019548676, guid: 0d4ccbeddeac24e4d87a448f5f3da040,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.05882353
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114774470330131648, guid: 0d4ccbeddeac24e4d87a448f5f3da040,
         type: 2}
@@ -4165,27 +4165,27 @@ Prefab:
     - target: {fileID: 224710456841989832, guid: 0d4ccbeddeac24e4d87a448f5f3da040,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224710456841989832, guid: 0d4ccbeddeac24e4d87a448f5f3da040,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.05882353
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224075453019548676, guid: 0d4ccbeddeac24e4d87a448f5f3da040,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.05882353
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224075453019548676, guid: 0d4ccbeddeac24e4d87a448f5f3da040,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224075453019548676, guid: 0d4ccbeddeac24e4d87a448f5f3da040,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.05882353
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224142046688920482, guid: 0d4ccbeddeac24e4d87a448f5f3da040,
         type: 2}
@@ -4279,6 +4279,7 @@ GameObject:
   - component: {fileID: 1844629227}
   - component: {fileID: 1844629218}
   - component: {fileID: 1844629217}
+  - component: {fileID: 1844629228}
   m_Layer: 0
   m_Name: D10
   m_TagString: Die
@@ -4541,6 +4542,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 33f38ae0702c296449683945d138f68c, type: 3}
   - {fileID: 8300000, guid: 62c6dd5297d513f43969385660beca16, type: 3}
   - {fileID: 8300000, guid: 794331c79007fb34a8052431407768d6, type: 3}
+--- !u!114 &1844629228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1844629216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c212ec3e8ab8744380e681635b62ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShrinkTime: 0.2
+  destroy_on_small: 1
 --- !u!1 &1854108610 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1023522919824482, guid: 6b94a7251dac0094e9ff26d3612ddf18,
@@ -5014,7 +5028,7 @@ Prefab:
     - target: {fileID: 224819116289959650, guid: 6b94a7251dac0094e9ff26d3612ddf18,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 736.875
+      value: 900.5056
       objectReference: {fileID: 0}
     - target: {fileID: 224819116289959650, guid: 6b94a7251dac0094e9ff26d3612ddf18,
         type: 2}

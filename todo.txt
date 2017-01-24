@@ -1,9 +1,11 @@
 TODO
+- Difference between Input.deviceOrientation and Screen.Orientation?
 - Make value 0 -> * on dice occur later
 - history feature
 - play around with physics (gravity, materials, force, drag) and dice spawn
 - animate roll button when critical, result display when done
 - (Particle) animation for dice disappearing (and appearing?)
+- Sleep\Standby mode on mobile o save battery? Does the screen turn off automatically
 - Rolling Sphere
 	- Inverse Sphere Collider
 	- raycast pointer onto a plane
