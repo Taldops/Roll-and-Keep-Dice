@@ -16,6 +16,9 @@ TODO
 - Improve Portrait UI
 - ctrl f "To Do"
 - Refactoring
+	- Naming conventions
+	- foreach loops
+	- [Serielize fields]
 - Adjust volume of individual sound effects
 	- how to calculate impact loudness?
 - special sound effect for abysmal rolls?
@@ -33,3 +36,7 @@ TODO
 - iformation window
 - settings window: Quality, fps display, mute button
 - UI Placement/size calculations on ScreenChange event?
+- Try more visual effects:
+	- Normalmaps
+	- Subsurfface scattering
+- Try doing the shrinking eith an animation?

@@ -36,7 +36,7 @@ public class DiceManager : MonoBehaviour {
 		bool result = false;
 		foreach(GameObject die in all_dice)
 		{
-			if(die.GetComponent<Die>().value == 0 || die.GetComponent<Die>().rolling)		//TODO Add velocity check
+			if(die.GetComponent<Die>().value == 0)// || die.GetComponent<Die>().rolling)		//TODO Add velocity check; Still occaisonal error without?
 			{
 				result = true;
 			}
@@ -55,7 +55,9 @@ public class DiceManager : MonoBehaviour {
 		foreach(GameObject die in all_dice)
 		{
 			//die.GetComponent<VanishParticles>().play();
-			GameObject.Destroy(die);
+			die.GetComponent<ShrinkScript>().destroy_on_small = true;
+			die.GetComponent<ShrinkScript>().play();
+			//GameObject.Destroy(die);
 		}
 		all_dice.Clear();
 	}

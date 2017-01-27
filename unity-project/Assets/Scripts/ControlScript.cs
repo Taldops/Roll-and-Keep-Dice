@@ -55,7 +55,9 @@ public class ControlScript : MonoBehaviour {
 			{
 				if(i >= UI.keep_num())
 				{
-					Active_dice[i].SetActive(false);
+					//Active_dice[i].SetActive(false);
+					Active_dice[i].GetComponent<ShrinkScript>().destroy_on_small = false;
+					Active_dice[i].GetComponent<ShrinkScript>().play();
 				}
 				else
 				{
@@ -78,7 +80,7 @@ public class ControlScript : MonoBehaviour {
 
 		base_accel = Input.acceleration;
 
-		UI.update_result_display(current_sum, Color.gray, FontStyle.Normal);
+		UI.update_result_display(current_sum, new Color(0.3f, 0.3f, 0.3f, 0.7f), FontStyle.Normal);
 	}
 
 	// Update is called once per frame
@@ -152,8 +154,8 @@ public class ControlScript : MonoBehaviour {
 			UI.update_result_display(current_sum, Color.black, FontStyle.Bold);
 		}
 		UI.toggle_all(!crits);		//No Tens means roll is over
-		UI.set_roll_enabled(true);
 		UI.switch_mode_crit(crits);
+		UI.set_roll_enabled(true);
 	}
 
 	//Calcs Sum and sets Tens

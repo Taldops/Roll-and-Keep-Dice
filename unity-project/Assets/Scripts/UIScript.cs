@@ -71,6 +71,7 @@ public class UIScript : MonoBehaviour {
 		if(font == FontStyle.Bold)
 		{
 			sound.play_result(2);
+			result_display.GetComponent<ShrinkScript>().play();
 		}
 		result_display.fontStyle = font;
 	}
@@ -80,8 +81,9 @@ public class UIScript : MonoBehaviour {
 		Text b_text = roll_button.GetComponentInChildren<Text>();
 		if(crit)
 		{
-			b_text.text = "Crit!";
+			b_text.text = "Roll Critical!";
 			b_text.color = new Color(0.8f,0,0);
+			b_text.fontStyle = FontStyle.Bold;
 			roll_button.GetComponent<MouseDownSFX>().sfx = sound.click_sfx;
 			sound.play_critical();
 		}
@@ -89,6 +91,7 @@ public class UIScript : MonoBehaviour {
 		{
 			b_text.text = "Roll";
 			b_text.color = new Color(0,0,0);
+			b_text.fontStyle = FontStyle.Normal;
 			roll_button.GetComponent<MouseDownSFX>().sfx = sound.start_sfx;
 		}
 	}
@@ -96,6 +99,11 @@ public class UIScript : MonoBehaviour {
 	public void set_roll_enabled(bool enabled)	//
 	{
 		roll_button.interactable = enabled;
+		if(roll_button.GetComponentInChildren<Text>().color == new Color(0.8f,0,0))
+		{
+			roll_button.GetComponent<ShrinkScript>().play();
+		}
+		//TODO This can be more robust. It depends on the order of enable and switch to critical and the color
 	}
 
 	public void toggle_all(bool enabled)
