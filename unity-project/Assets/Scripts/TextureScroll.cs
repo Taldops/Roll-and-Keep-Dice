@@ -5,8 +5,9 @@ using UnityEngine;
 using System.Collections;
 
 public class TextureScroll : MonoBehaviour {
-	
-	public float scrollSpeed = 0.5F;
+
+	public Vector2 scroll_vector;
+
 	private Renderer rend;
 
 	void Start() {
@@ -14,7 +15,7 @@ public class TextureScroll : MonoBehaviour {
 	}
 
 	void Update() {
-		float offset = Time.time * scrollSpeed;
-		rend.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+		Vector2 offset = Time.time * scroll_vector;
+		rend.material.SetTextureOffset("_MainTex", offset);
 	}
 }

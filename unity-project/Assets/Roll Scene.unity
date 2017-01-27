@@ -725,7 +725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ec2e148ed84154f85dfb4cfb8d9e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scroll_vector: {x: 0, y: 0}
+  scroll_vector: {x: 0.01, y: 0}
 --- !u!224 &839127739 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224819116289959650, guid: 6b94a7251dac0094e9ff26d3612ddf18,
@@ -850,7 +850,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1073484208}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26a86c4a02653fc44bfd6287f48eaf4d, type: 3}
   m_Name: 
@@ -3868,6 +3868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c212ec3e8ab8744380e681635b62ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start_on_active: 0
   ShrinkTime: 0.125
   destroy_on_small: 0
   pulse: 1
@@ -4570,6 +4571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c212ec3e8ab8744380e681635b62ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start_on_active: 0
   ShrinkTime: 0.1
   destroy_on_small: 1
   pulse: 0
@@ -4591,6 +4593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c212ec3e8ab8744380e681635b62ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start_on_active: 0
   ShrinkTime: 0.125
   destroy_on_small: 0
   pulse: 1
@@ -5294,7 +5297,7 @@ Prefab:
     - target: {fileID: 224323281433644894, guid: 6b94a7251dac0094e9ff26d3612ddf18,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -425
+      value: -305
       objectReference: {fileID: 0}
     - target: {fileID: 224344824484158886, guid: 6b94a7251dac0094e9ff26d3612ddf18,
         type: 2}
