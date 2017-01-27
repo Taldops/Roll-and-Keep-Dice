@@ -100,5 +100,6 @@ public class SuccessEffects : MonoBehaviour {
 			GetComponent<Light>().enabled = true;
 		}
 		GetComponent<Renderer>().material.SetColor("_EmissionColor", GetComponent<Light>().color);
+		GetComponent<Light>().enabled = true;	//TODO Make dependent on graphics options
 	}
 }

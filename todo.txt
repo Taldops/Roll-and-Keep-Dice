@@ -39,4 +39,5 @@ TODO
 - Try more visual effects:
 	- Normalmaps
 	- Subsurfface scattering
+	- try stuff from the effects package (like motion blur, AA)
 - Try doing the shrinking eith an animation?

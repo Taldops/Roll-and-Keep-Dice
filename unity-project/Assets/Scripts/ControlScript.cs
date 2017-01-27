@@ -97,7 +97,7 @@ public class ControlScript : MonoBehaviour {
 
 		Vector3 accel_delta = Input.acceleration - base_accel;
 		base_accel = Input.acceleration;
-		if(accel_delta.magnitude > 0.4f)	//TODO: Whats a good threshold?
+		if(accel_delta.magnitude > 0.4f)	//TODO: Whats a good threshold?		//Add shake on Key?
 		{
 			//Correcting axes:
 			if( Screen.orientation == ScreenOrientation.LandscapeLeft)
