@@ -1089,6 +1089,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1844629229}
+        m_MethodName: UpdateAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Dropdown+DropdownEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &336279069
@@ -5636,11 +5647,11 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 0.9
-    m_Bias: 0.5
+    m_Bias: 0.4
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
@@ -7933,6 +7944,7 @@ GameObject:
   - component: {fileID: 1844629218}
   - component: {fileID: 1844629217}
   - component: {fileID: 1844629228}
+  - component: {fileID: 1844629229}
   m_Layer: 0
   m_Name: D10
   m_TagString: Die
@@ -8127,7 +8139,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1844629216}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1, z: -0.2}
+  m_LocalPosition: {x: 0, y: 2, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1.02}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8148,11 +8160,11 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
+    m_Strength: 0.5
+    m_Bias: 0.4
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
@@ -8164,7 +8176,7 @@ Light:
     m_Bits: 4294967295
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 0
+  m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!114 &1844629226
@@ -8212,6 +8224,24 @@ MonoBehaviour:
   pulse: 0
   loop: 0
   target_scale: {x: 0, y: 0, z: 0}
+--- !u!114 &1844629229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1844629216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c478db7031838f2418ab2dfc0f1b8dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshes:
+  - {fileID: 4300000, guid: ce918392eaad8c34cab432d40d440fcf, type: 3}
+  - {fileID: 4300002, guid: 1076421fbf334594ca5ae33ead055501, type: 3}
+  - {fileID: 4300004, guid: 95499fc3f3aa06a438198db30f709c7a, type: 3}
+  collisions:
+  - {fileID: 4300000, guid: ce918392eaad8c34cab432d40d440fcf, type: 3}
+  - {fileID: 4300002, guid: 1076421fbf334594ca5ae33ead055501, type: 3}
 --- !u!1 &1854108610 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1023522919824482, guid: 6b94a7251dac0094e9ff26d3612ddf18,
@@ -8914,7 +8944,7 @@ Prefab:
     - target: {fileID: 224819116289959650, guid: 6b94a7251dac0094e9ff26d3612ddf18,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 719.06244
+      value: 495
       objectReference: {fileID: 0}
     - target: {fileID: 224819116289959650, guid: 6b94a7251dac0094e9ff26d3612ddf18,
         type: 2}

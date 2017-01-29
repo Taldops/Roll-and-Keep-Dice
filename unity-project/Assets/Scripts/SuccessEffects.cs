@@ -95,10 +95,7 @@ public class SuccessEffects : MonoBehaviour {
 		succ_count++;
 		
 		//Visual
-		if(QualitySettings.GetQualityLevel() > 3)	//TODO Is this good?
-		{
-			GetComponent<Light>().enabled = true;
-		}
+		GetComponent<Light>().enabled = true;
 		GetComponent<Renderer>().material.SetColor("_EmissionColor", GetComponent<Light>().color);
 		GetComponent<Light>().enabled = true;	//TODO Make dependent on graphics options
 	}
