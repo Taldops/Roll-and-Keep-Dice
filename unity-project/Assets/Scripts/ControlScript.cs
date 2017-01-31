@@ -180,7 +180,7 @@ public class ControlScript : MonoBehaviour {
 			}
 			else
 			{
-				Active_dice[i].GetComponent<Darken>().set_brightness(0.5f);	
+				Active_dice[i].GetComponent<Darken>().set_brightness(0.3f);	
 			}
 		}
 		Tens = crits;

@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Darken : MonoBehaviour {
 
-	public float speed;
+	//TODO this can be made more flexible, like shrink script
+	//TODO use generics/templates to combine the two into one script?
+
+	public float animLength;
 
 	private float progress = 0;
 	private Color target_color;
-	private Color source_color;
 	private Color original_color;
 	private Renderer rend;
 
@@ -16,7 +18,6 @@ public class Darken : MonoBehaviour {
 	public void set_brightness(float brightness)
 	{
 		brightness = Mathf.Clamp01(brightness);
-		source_color = rend.material.color;
 		target_color = new Color(brightness * original_color.r, brightness * original_color.g, brightness * original_color.b, original_color.a);
 		progress = 0;
 	}
@@ -31,8 +32,8 @@ public class Darken : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		progress += speed;
-		Color c = Color.Lerp(source_color, target_color, progress);
+		progress += Time.deltaTime/animLength;
+		Color c = Color.Lerp(original_color, target_color, progress);
 		rend.material.color = c;//
 	}
 }
