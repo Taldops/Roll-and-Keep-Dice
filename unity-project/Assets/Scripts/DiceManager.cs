@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class DiceManager : MonoBehaviour {
 	
 	public GameObject die_prefab;
+	public float movementThreshold;		//When is a die considered "still rolling"
 	
 	private static List<GameObject> all_dice;
 	
@@ -36,15 +37,18 @@ public class DiceManager : MonoBehaviour {
 		bool result = false;
 		foreach(GameObject die in all_dice)
 		{
-			if(die.GetComponent<Die>().value == 0)// || die.GetComponent<Die>().rolling)		//TODO Add velocity check; Still occaisonal error without?
+			if(die.GetComponent<Die>().value == 0 // || die.GetComponent<Die>().rolling)		//TODO Add velocity check; Still occaisonal error without?
+				|| die.GetComponent<Rigidbody>().angularVelocity.sqrMagnitude > movementThreshold
+				|| die.GetComponent<Rigidbody>().velocity.sqrMagnitude > movementThreshold
+				|| die.GetComponent<NotMoving>().stillMoving)
 			{
 				result = true;
 			}
 			else
 			{
 				//Stops dice from jittering		//TODO Make StopJittering.cs
-				die.GetComponent<Rigidbody>().drag = 8;
-				die.GetComponent<Rigidbody>().angularDrag = 0.2f;
+				die.GetComponent<Rigidbody>().drag = 10;
+				die.GetComponent<Rigidbody>().angularDrag = 0.5f;
 			}
 		}
 		return result;

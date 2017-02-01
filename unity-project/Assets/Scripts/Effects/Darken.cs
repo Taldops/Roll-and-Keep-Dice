@@ -6,6 +6,7 @@ public class Darken : MonoBehaviour {
 
 	//TODO this can be made more flexible, like shrink script
 	//TODO use generics/templates to combine the two into one script?
+	//TODO Darken Light component as well
 
 	public float animLength;
 

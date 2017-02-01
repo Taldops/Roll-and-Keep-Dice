@@ -61,8 +61,23 @@ public class ShrinkScript : MonoBehaviour {
 					revert();
 				}
 			}
-			progress += Time.deltaTime/ShrinkTime;		//TODO USE Time.deltaTime more (in darken)
+			progress += Time.deltaTime/ShrinkTime;
 			transform.localScale = Vector3.Lerp(original_scale, target_scale, progress);
+		}
+
+		if(GetComponent<MeshCollider>() != null && GetComponent<Rigidbody>() != null)	//TODO This can be done better
+		{
+			//Disable Stuff when too small:		//TODO Refactor
+			if(transform.localScale.sqrMagnitude < 0.001f)
+			{
+				GetComponent<MeshCollider>().enabled = false;
+				GetComponent<Rigidbody>().useGravity = false;
+			}
+			else
+			{
+				GetComponent<MeshCollider>().enabled = true;
+				GetComponent<Rigidbody>().useGravity = true;
+			}
 		}
 	}
 

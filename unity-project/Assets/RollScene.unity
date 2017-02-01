@@ -8969,6 +8969,7 @@ GameObject:
   - component: {fileID: 1844629217}
   - component: {fileID: 1844629228}
   - component: {fileID: 1844629229}
+  - component: {fileID: 1844629230}
   m_Layer: 0
   m_Name: D10
   m_TagString: Die
@@ -9266,6 +9267,19 @@ MonoBehaviour:
   collisions:
   - {fileID: 4300000, guid: ce918392eaad8c34cab432d40d440fcf, type: 3}
   - {fileID: 4300002, guid: 1076421fbf334594ca5ae33ead055501, type: 3}
+--- !u!114 &1844629230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1844629216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df3bfa1b513bdce46963fd1caeb0505a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stillTime: 0.2
+  threshold: 0.01
 --- !u!1 &1854108610 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1023522919824482, guid: 6b94a7251dac0094e9ff26d3612ddf18,
