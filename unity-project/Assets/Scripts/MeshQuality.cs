@@ -14,7 +14,6 @@ public class MeshQuality : MonoBehaviour {
 	public void UpdateAll()		//It could be static, but then it doesn't work with GUI
 	{
 		MeshQuality[] objects = Object.FindObjectsOfType<MeshQuality>();
-		print(objects.Length);
 		foreach(MeshQuality o in objects)
 		{
 			o.UpdateMesh();

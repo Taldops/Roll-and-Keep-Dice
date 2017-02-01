@@ -3,7 +3,6 @@ unity-project/Temp
 unity-project/Library
 unity-project/Obj
 unity-project/Assets/StreamingAssets
-unity-project/Assets/Import
 unused_assets
 **/*.meta
 **/*.csproj
