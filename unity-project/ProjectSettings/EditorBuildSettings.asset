@@ -9,5 +9,7 @@ EditorBuildSettings:
     path: Assets/Scene.unity
   - enabled: 0
     path: Assets/temp.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Roll Scene.unity
+  - enabled: 1
+    path: Assets/RollScene.unity

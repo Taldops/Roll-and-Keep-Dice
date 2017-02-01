@@ -14,6 +14,8 @@ public class ControlScript : MonoBehaviour {
 	public float distance;
 	public float die_mass;
 
+	public GameObject GUI;
+
 	public Material crit_material;
 
 	//State variables
@@ -22,12 +24,12 @@ public class ControlScript : MonoBehaviour {
 	private int current_sum = 0;	//Current sum of all rolls
 	private Vector3 base_accel;
 
-	UIScript UI;
+	private UIScript UI;
+
 	DiceManager Dice;
 
 	void Start () {
 		Active_dice = new List<GameObject>();
-		UI = GetComponent<UIScript>();
 		Dice = GetComponent<DiceManager>();
 		Input.gyro.enabled = true;
 		base_accel = Input.acceleration;
@@ -85,6 +87,8 @@ public class ControlScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		UI = GUI.GetComponentInChildren<UIScript>(false);
 
 		//Counting the result
 		if(!Dice.still_rolling() && Tens == -1)	//TODO Also no acceleration?
