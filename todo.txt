@@ -13,10 +13,11 @@ TODO
 	- update dice for next roll (normal and crits) in real time
 	- lowpass filter while in bubble
 - lefthanded UI
-- Improve Portrait UI
+- Use RectTransform Stretch/Alignment (upper left)
 - ctrl f "To Do"
 - Refactoring
 	- Naming conventions
+		- use 'this' for fields 
 	- foreach loops
 	- [Serielize fields]
 - Adjust volume of individual sound effects

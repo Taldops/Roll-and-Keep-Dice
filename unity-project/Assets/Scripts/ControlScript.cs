@@ -23,6 +23,7 @@ public class ControlScript : MonoBehaviour {
 	private List<GameObject> Active_dice;
 	private int current_sum = 0;	//Current sum of all rolls
 	private Vector3 base_accel;
+	private int critAkku = 0;
 
 	private UIScript UI;
 
@@ -45,6 +46,7 @@ public class ControlScript : MonoBehaviour {
 		UI.switch_mode_crit(false);
 		Dice.clear_dice();
 		base_accel = Input.acceleration;
+		critAkku = 0;
 	}
 
 	public void initiate_roll()
@@ -73,6 +75,7 @@ public class ControlScript : MonoBehaviour {
 		{
 			Dice.clear_dice();
 			current_sum = 0;
+			critAkku = 0;
 			SuccessEffects.reset();
 		}
 		Active_dice.Clear();
@@ -107,10 +110,6 @@ public class ControlScript : MonoBehaviour {
 			if( Screen.orientation == ScreenOrientation.LandscapeLeft)
 			{
 				accel_delta = new Vector3(- accel_delta.x, accel_delta.y, accel_delta.z);
-			}
-			if( Screen.orientation == ScreenOrientation.Portrait)
-			{
-				accel_delta = new Vector3(- accel_delta.x, accel_delta.z, - accel_delta.y);		//z and y swapped because portrait usually lies flat on the table
 			}
 			GameObject[] dice = GameObject.FindGameObjectsWithTag("Die");
 			foreach(GameObject die in dice)
@@ -156,6 +155,7 @@ public class ControlScript : MonoBehaviour {
 		else
 		{
 			UI.update_result_display(current_sum, Color.black, FontStyle.Bold);
+			GetComponent<History>().AddRoll(UI.roll_num(), UI.keep_num(), critAkku, current_sum);	//Record Roll
 		}
 		UI.toggle_all(!crits);		//No Tens means roll is over
 		UI.switch_mode_crit(crits);
@@ -188,6 +188,7 @@ public class ControlScript : MonoBehaviour {
 			}
 		}
 		Tens = crits;
+		critAkku += crits;
 		return result;
 	}
 
